@@ -7,6 +7,6 @@ inode：存储文件元信息。
 # Page cache缓存文件的页以优化文件IO。
 # Buffer cache缓存块设备的块以优化块设备IO。
 
-page cache → block   缓存文件数据。通常：4K
-buffer cache → inode  缓存磁盘数据。通常：1K
+- page cache → block   缓存文件数据。通常：4K
+- buffer cache → inode  缓存磁盘数据。通常：1K
 
