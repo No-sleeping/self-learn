@@ -10,4 +10,4 @@ inode：存储文件元信息。
 - page cache → block   缓存文件数据。通常：4K
 - buffer cache → inode  缓存磁盘数据。通常：1K
 
-![buffer]()
+![buffer](https://github.com/No-sleeping/self-learn/blob/main/images/Kernel/buffer.jpg)
