@@ -1,7 +1,8 @@
 ## 1、iptables
 
-!()[https://github.com/No-sleeping/self-learn/blob/main/images/kubernetes/%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%BF%87%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E6%B5%81%E7%A8%8B.png]
+!(数据经过防火墙的流程)[https://github.com/No-sleeping/self-learn/blob/main/images/kubernetes/2.png]
 
+!(数据经过防火墙的流程)[https://github.com/No-sleeping/self-learn/blob/main/images/kubernetes/%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%BF%87%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E6%B5%81%E7%A8%8B.png]
 filter表：负责过滤功能，防火墙；内核模块：iptables_filter
 
 nat表：network address translation，网络地址转换功能；内核模块：iptable_nat
