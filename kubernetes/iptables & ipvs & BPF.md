@@ -48,7 +48,7 @@ iptables与IPVS都是基于Netfilter实现的，但因为定位不同，二者�
 - 支持比iptables更复杂的复制均衡算法（最小负载、最少连接、加权等）；
 - 支持服务器健康检查和连接重试等功能；
 - 可以动态修改ipset的集合，即使iptables的规则正在使用这个集合。
-#### 2.6 kube-proxy工作原理
+#### 2.6 kube-proxy工作模式
 ##### 2.6.1 userspace
  userspace是在用户空间，通过kube-proxy来实现service的代理服务
 ##### 2.6.1 iptables
