@@ -1,4 +1,6 @@
 ## 1、iptables
+# 这里有张图：数据包流入 流经规则、表
+
 filter表：负责过滤功能，防火墙；内核模块：iptables_filter
 
 nat表：network address translation，网络地址转换功能；内核模块：iptable_nat
