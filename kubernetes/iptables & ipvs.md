@@ -58,8 +58,8 @@ iptables与IPVS都是基于Netfilter实现的，但因为定位不同，二者�
 ##### 2.6.1 ipvs
   在kubernetes 1.8以上的版本中， ipvs 是基于 NAT 实现的，通过ipvs的NAT模式，对访问k8s service的请求进行虚IP到POD IP的转发。
   当创建一个 service 后，kubernetes 会在每个节点上创建一个网卡，同时帮你将 Service IP(VIP) 绑定上，此时相当于每个 Node 都是一个 ds，而其他任何 Node 上的 Pod，甚至是宿主机服务(比如 kube-apiserver 的 6443)都可能成为 rs；
-## 3、bps
 
+---
 
 参考：
 
@@ -67,16 +67,4 @@ https://www.zsythink.net/archives/1199 （iptables–入门版）
 
 https://blog.csdn.net/u011537073/article/details/82685586 （iptables-详细参数说明）
 
-https://www.tigera.io/blog/introducing-the-calico-ebpf-dataplane/   （Introducing the Calico eBPF dataplane）
-
-https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables （Why is the kernel community replacing iptables with BPF?）
-
-http://www.dockone.io/article/10484   （腾讯TKE用eBPF）
-
-https://cilium.io/blog/2021/05/11/cni-benchmark （CNI Benchmark: Understanding Cilium Network Performance）
-
 https://www.cnblogs.com/zjz20/p/13452717.html （iptables和ipvs）
-
-https://www.tcpdump.org/papers/bpf-usenix93.pdf   （The BSD Packet Filter:A New Architecture for User-level Packet Capture）
-
-https://davidlovezoe.club/wordpress/archives/1122 （LINUX超能力BPF技术介绍及学习分享）
