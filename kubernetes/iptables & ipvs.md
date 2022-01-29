@@ -1,6 +1,6 @@
 # iptables 
 
-![](https://www.zsythink.net/wp-content/uploads/2017/02/021217_0051_6.png)
+![](https://github.com/No-sleeping/self-learn/blob/main/images/kubernetes/%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%BF%87%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E6%B5%81%E7%A8%8B.png)
 
 <br/>
 
