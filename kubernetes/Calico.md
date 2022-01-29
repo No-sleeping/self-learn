@@ -14,7 +14,6 @@ veth 设备是成对的，一个是 container 之中，另一个在 container �
 <br/>
 
 ## 【IPIP】
-![](https://img2018.cnblogs.com/blog/1060878/201904/1060878-20190415165144848-1984358878.png)
 
 ![](https://s8.51cto.com/images/20200518/1589770646867489.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
 
