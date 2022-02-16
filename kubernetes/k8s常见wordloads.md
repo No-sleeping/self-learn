@@ -1,5 +1,9 @@
 - [ReplicationController](#ReplicationController)
-- [ReplicationController](##ReplicationController)
+- [ReplicaSet](#ReplicaSet)
+- [Deployment](#Deployment)
+- [StatefulSets](#StatefulSets)
+- [DaemonSet](#DaemonSet)
+- [Jobs](#Jobs)
 
 ## ReplicationController
 
