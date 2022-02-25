@@ -142,7 +142,8 @@ if __name__ == "__main__":
 # 总结
 
   二叉树是很多重要算法及模型的基础，比如二叉搜索树（BST），哈夫曼树(Huffman Tree)，CART决策树等。本文先介绍了树的基本术语，二叉树的定义与性质及遍历、储存，然后笔者自己用Python实现了二叉树的上述方法，笔者代码的最大亮点在于实现了二叉树的可视化，这个功能是激动人心的。
-  在Python中，已有别人实现好的二叉树的模块，它是**binarytree**模块，其官方文档的网址为：https://pypi.org/project/binarytree/。其使用的例子如下：
+  
+  在Python中，已有别人实现好的二叉树的模块，它是**binarytree**模块，其官方文档的网址为：https://pypi.org/project/binarytree/。  其使用的例子如下：
 
 ```
 >>> from binarytree import tree
