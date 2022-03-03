@@ -91,18 +91,18 @@ class Btree(object):
     # 中序遍历
     def inorder(self):
         if self.left is not None:
-            self.left.preorder()
+            self.left.inorder()
         if self.data is not None:
             print(self.data)
         if self.right is not None:
-            self.right.preorder()
+            self.right.inorder()
 
     # 后序遍历
     def postorder(self):
         if self.left is not None:
-            self.left.preorder()
+            self.left.postorder()
         if self.right is not None:
-            self.right.preorder()
+            self.right.postorder()
         if self.data is not None:
             print(self.data)
 
