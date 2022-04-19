@@ -104,6 +104,12 @@ o New Session Ticket：是优化SSL连接的一种方法，此处不做特别说
 
 <br/>
 
+
+***
+## 四、nginx 	ssl_session_cache明细
+
+![image](https://user-images.githubusercontent.com/29038574/164047109-5e9785a9-51be-46e2-bcc2-e1c398ef26b4.png)
+
 参考：
 
 https://www.csdn.net/tags/Ntjagg2sNDA3ODItYmxvZwO0O0OO0O0O.html （TLS四次握手）
@@ -111,3 +117,5 @@ https://www.csdn.net/tags/Ntjagg2sNDA3ODItYmxvZwO0O0OO0O0O.html （TLS四次握�
 https://blog.csdn.net/u010285974/article/details/85320788 （HTTPS的七次握手（TCP三次+TLS四次））
 
 https://blog.csdn.net/m0_50084718/article/details/113377136  (用wireshark抓包分析TLS协议)
+
+http://nginx.org/en/docs/mail/ngx_mail_ssl_module.html (nginx 详细参数配置)
