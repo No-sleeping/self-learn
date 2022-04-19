@@ -78,8 +78,36 @@ TLS四次握手简图：
 
 ***
 
+## 三、SSL/TLS协议运作流程明细
+
+![](https://img-blog.csdnimg.cn/20210129121236557.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUwMDg0NzE4,size_16,color_FFFFFF,t_70#pic_center)
+
+<br/>
+
+o Client Hello：客户端向服务端打招呼；携带支持的协议、支持的安全套件供服务端选择；
+
+o Server Hello：服务端回应客户客户端的招呼信息；结合客户端的信息，选择合适的加密套件；
+
+o Certificate：服务端向客户端发送自己的数字证书（此证书包含服务端的公钥），以实现验证身份；
+
+o Server Key Exchange：服务端向客户端发送基于选择的加密套件生成的公钥（此公钥为椭圆曲线的公钥，用于协商出对称加密的密钥）；
+
+o Server Hello Done：服务端向客户端表示响应结束；
+
+o Client Key Exchange：客户端向服务端发送自己生成的公钥（此公钥为椭圆曲线的公钥，用于协商出对称加密的密钥）；
+
+o Change Cipher Spec：变更密码规范；告知服务端/客户端，以后的通信都是基于AES加密的；
+
+o Encrypted Handshake Message：基于协商生成的密钥，用AES加密验证信息让服务端/客户端进行认证；如果对方可以解密，则双方认证无误开始通信；
+
+o New Session Ticket：是优化SSL连接的一种方法，此处不做特别说明
+
+<br/>
+
 参考：
 
-https://www.csdn.net/tags/Ntjagg2sNDA3ODItYmxvZwO0O0OO0O0O.html（TLS四次握手）
+https://www.csdn.net/tags/Ntjagg2sNDA3ODItYmxvZwO0O0OO0O0O.html （TLS四次握手）
 
 https://blog.csdn.net/u010285974/article/details/85320788 （HTTPS的七次握手（TCP三次+TLS四次））
+
+https://blog.csdn.net/m0_50084718/article/details/113377136  (用wireshark抓包分析TLS协议)
