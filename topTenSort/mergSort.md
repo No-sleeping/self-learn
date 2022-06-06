@@ -24,8 +24,8 @@ if __name__ == '__main__':
     # 归并排序：每次将当前的list分成两组
     # 然后针对这两组list从头元素进行比较：从小到大排序
     # 利用递归merg(mergeSort(nums1),mergeSort(nums2)) 完成整租的怕排序
-    # 时间：O(nlogn)
-    # 空间：O(n)
+    # 稳定，时间复杂度：平均O(nlogn)、最坏O(nlogn)，最好O(nlogn);
+    # 空间复杂度：O(n)
     nums = [22, 34, 3, 32,  82, 55, 89, 50, 37, 5, 64, 35, 9, 70]
     print(mergeSort(nums))
 ```
