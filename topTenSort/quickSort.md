@@ -6,8 +6,8 @@
 # 在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
 # 3、递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；
 
-# 虽然 Worst Case 的时间复杂度达到了 O(n²)，
-# 但是人家就是优秀，在大多数情况下都比平均时间复杂度为 O(n logn) 的排序算法表现要更好，
+# 时间复杂度：平均O(nlogn)、最坏O(n^{2})，最好O(nlogn);
+# 空间复杂度：O(logn)
 
 def run(arr,left,right):
     index, pivot = left, right
