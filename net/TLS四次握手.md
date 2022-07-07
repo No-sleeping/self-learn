@@ -82,6 +82,8 @@ TLS四次握手简图：
 
 ![](https://img-blog.csdnimg.cn/20210129121236557.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUwMDg0NzE4,size_16,color_FFFFFF,t_70#pic_center)
 
+![](https://raw.githubusercontent.com/No-sleeping/self-learn/main/images/net/SSL%E6%8F%A1%E6%89%8B%20(3).png)
+
 <br/>
 
 o Client Hello：客户端向服务端打招呼；携带支持的协议、支持的安全套件供服务端选择；
