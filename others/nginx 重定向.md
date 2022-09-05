@@ -153,3 +153,9 @@ nginxlog：
 **HTTP307** 状态码代表的意思是 临时**重定向，同302**，即 HTTP 307 Temporary Redirect 响应状态。
 
 **HTTP308**** 状态码代表的意思是 永久**重定向，同301**，即 HTTP 308 Permanent Redirect 响应状态。
+
+---
+
+https://www.rfc-editor.org/rfc/rfc7538   (The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect))
+
+https://www.icode9.com/content-4-774409.html
