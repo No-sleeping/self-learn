@@ -42,7 +42,7 @@
 
 **再跳转到：https://www.iqoo.com**
 
-**{{这里放一张}}**
+![](https://github.com/No-sleeping/self-learn/blob/main/images/other/nginx%20redirect/2.png)
 
 <br/>
 
@@ -61,7 +61,7 @@
 
 效果同 1.1，状态码改为**301**
 
-**{{这里放一张}}**
+![](https://github.com/No-sleeping/self-learn/blob/main/images/other/nginx%20redirect/3.png)
 
 ### 1.3 修改return ，再请求，依旧到iqoo
 
@@ -79,7 +79,7 @@
 
 效果通1.2
 
-**{{这里放一张}}**
+![](https://github.com/No-sleeping/self-learn/blob/main/images/other/nginx%20redirect/4.png)
 
 ### 1.4 **清除缓存**之后再请求 ，到vivo（chrome自带功能停用缓存）
 
@@ -87,7 +87,7 @@
 
 再跳转到**https://www.vivo.com/
 
-**{{这里放一张}}**
+![](https://github.com/No-sleeping/self-learn/blob/main/images/other/nginx%20redirect/5.png)
 
 <br/>
 
