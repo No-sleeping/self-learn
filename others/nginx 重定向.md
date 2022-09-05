@@ -85,7 +85,7 @@
 
 会跳转到：**http://www.vivo.com/**
 
-再跳转到：“**https://www.vivo.com/
+再跳转到**https://www.vivo.com/
 
 **{{这里放一张}}**
 
@@ -118,16 +118,18 @@
 **301：**
 
 ```
+后端log：
 {{ip}} - - [05/Sep/2022:16:02:27 +0800] "GET / HTTP/1.1" 200 18 "http://{{ip}} :90/testwq" "PostmanRuntime/7.26.8" "-" "-"
-
+nginxlog：
 {{ip}}  - - [05/Sep/2022:16:02:27 +0800] "POST /testwq HTTP/1.1" 301 169 "-" "PostmanRuntime/7.26.8" "-" "-"
 ```
 
 **308：**
 
 ```
+后端log：
 {{ip}}  - - [05/Sep/2022:16:05:19 +0800] "POST / HTTP/1.1" 200 18 "http://{{ip}} :90/testwq" "PostmanRuntime/7.26.8" "-" "-"
-
+nginxlog：
 {{ip}}  - - [05/Sep/2022:16:05:19 +0800] "POST /testwq HTTP/1.1" 308 171 "-" "PostmanRuntime/7.26.8" "-" "-"
 ```
 
