@@ -200,7 +200,9 @@ Process finished with exit code 0
 
 ---
 
-<br/>
+# 耗时对比
+
+## process
 
 单函数执行：5s
 
@@ -217,9 +219,9 @@ MainProcessstart at 1677138713.65
 MainProcess is done
 during time : 5.04020094872
 
-real	0m5.060s
-user	0m5.053s
-sys	0m0.007s
+real    0m5.060s
+user    0m5.053s
+sys    0m0.007s
 ```
 
 <br/>
@@ -280,9 +282,9 @@ Process-1 is done
 Process-4 is done
 Process-9 is done
 
-real	0m5.527s
-user	0m52.433s
-sys	0m0.042s
+real    0m5.527s
+user    0m52.433s
+sys    0m0.042s
 
 ```
 
@@ -328,7 +330,57 @@ MainProcessstart at 1677142229.96
 MainProcess is done
 during time : 50.1973679066
 
-real	0m50.218s
-user	0m50.203s
-sys	0m0.014s
+real    0m50.218s
+user    0m50.203s
+sys    0m0.014s
 ```
+
+## threading
+
+threading：2线程，19s
+
+```python
+import multiprocessing
+import threading
+import time
+import datetime
+ 
+ 
+def run(x):
+    subStartTime = time.time()
+    print(threading.current_thread().name+'start at %s' % subStartTime )
+    n = 100000000
+    while True:
+        n -= 1
+        if n < 0:break
+    subEndTime = time.time()
+    print("%s is done" % threading.current_thread().name)
+    print("subFunction during time: %s" %(subEndTime-subStartTime))
+    return None
+ 
+if __name__ == '__main__':
+    startTime = time.time()
+    for i in range (2):
+        t = threading.Thread(target=run,args=(i,))
+        t.start()
+    endTime = time.time()
+    print("during time : %s" %(endTime-startTime))
+------
+ 
+# time python runpy.py
+Thread-1start at 1677206458.32
+Thread-2start at 1677206458.32
+ during time : 0.00047779083252
+Thread-1 is done
+subFunction during time: 18.7094848156
+Thread-2 is done
+subFunction during time: 18.9912011623
+ 
+real    0m19.013s
+user    0m17.874s
+sys 0m10.455s
+```
+
+<br/>
+
+perf 看到热点函数为 `PyEval_EvalFrameEx`
