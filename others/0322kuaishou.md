@@ -19,6 +19,13 @@
 <br/>
 
 ### 编程：数组中第K个最大元素，并设计case。
+```python
+
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return sorted(nums,reverse=True)[k-1]
+        
+```
 
 <br/>
 
