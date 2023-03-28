@@ -1,6 +1,6 @@
 ### 介绍下容器。
 
-总体架构待补充
+![](https://jimmysong.io/kubernetes-handbook/images/architecture.png)
 
 ### 具体例子
 
