@@ -27,7 +27,7 @@ spec:
     spec:
       initContainers:
       - name: init-inotify-limit
-        image: registry.vivo.xyz/library/busybox:v1.0
+        image: {{busybox_iamge:1.0}}
         command: ['sysctl', '-w', 'fs.inotify.max_user_instances=200']
         securityContext:
           privileged: true
@@ -40,7 +40,7 @@ spec:
           path: /var/log
       containers:
       - name: hollow-kubelet
-        image: registry.vivo.xyz/library/kubemark:v1.0
+        image: {{karmada_iamge:1.0}}
         ports:
         - containerPort: 4194
         - containerPort: 10250
@@ -71,7 +71,7 @@ spec:
         securityContext:
           privileged: true
       - name: hollow-proxy
-        image: registry.vivo.xyz/library/kubemark:v1.0
+        image: {{karmada_iamge:1.0}}
         env:
         - name: NODE_NAME
           valueFrom:
