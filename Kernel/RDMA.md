@@ -53,7 +53,7 @@ InfiniBand使用I/O通道进行数据传输，每个I/O通道提供虚拟的NIC�
   
   RoCE 有两个版本，RoCE v1是一种链路层协议，允许在同一个广播域下的任意两台主机直接访问。
   
-  RoCE v2是一种Internet层协议，即可以实现路由功能。虽然RoCE协议这些好处都是基于融合以太网的特性，但是RoCE协议也可以使用在传统以太网网络或者非融合以太网络中。
+  **RoCE v2**是一种Internet层协议，即可以实现路由功能。虽然RoCE协议这些好处都是基于融合以太网的特性，但是RoCE协议也可以使用在传统以太网网络或者非融合以太网络中。
 - iWARP
   
   iWARP也是一个允许在TCP上执行RDMA的网络协议。IB和RoCE中存在的功能在iWARP中不受支持。它支持在标准以太网基础设施（交换机）上使用RDMA
@@ -63,3 +63,5 @@ InfiniBand使用I/O通道进行数据传输，每个I/O通道提供虚拟的NIC�
 https://maimai.cn/article/detail?fid=1761674830&efid=T_YZaGxuBX_GDevAO1KHTA   （通俗易懂）
 
 https://blog.csdn.net/u011458874/article/details/121602188  （初识RDMA技术——RDMA概念，特点，协议，通信流程）
+
+https://zhuanlan.zhihu.com/p/361740115  （较全）
