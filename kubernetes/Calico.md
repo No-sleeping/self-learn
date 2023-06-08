@@ -74,3 +74,5 @@ https://blog.51cto.com/u_14268033/2496122 （IPIP模式）
 https://www.cnblogs.com/goldsunshine/p/10701242.html（calio）
 
 https://blog.csdn.net/qq_23435961/article/details/106660196  （calio）
+
+https://cloud.tencent.com/developer/article/old/1922673  （BGP基本概念）
