@@ -17,6 +17,55 @@
 - Set（集合）
 - Zset（有序集合）
 
+
+```sh
+# STRING
+1.1.1.1:11732> set qwe 11
+OK
+1.1.1.1:11732> get qwe
+"11"
+
+# LIST
+1.1.1.1:11733> lpush qq ew
+(integer) 1
+1.1.1.1:11733> LRANGE qq 0 10
+1) "ew"
+1.1.1.1:11733> lpush qq ew we
+(integer) 3
+1.1.1.1:11733> LRANGE qq 0 10
+1) "we"
+2) "ew"
+3) "ew"
+1.1.1.1:11733> LPOP qq # 移出并获取列表的第一个元素
+"we"
+1.1.1.1:11733> LPOP qq
+"ew"
+1.1.1.1:11733> LRANGE qq 0 10
+"ew"
+
+# HASH
+1.1.1.1:11733> hmset hashkey ewq 123
+OK
+1.1.1.1:11733> hgetall hashkey
+1) "ewq"
+2) "123"
+
+
+#SET
+1.1.1.1:11732> sadd setkey redis
+(integer) 1
+1.1.1.1:11732> sadd setkey mysql
+(integer) 1
+1.1.1.1:11732> SMEMBERS setkey
+1) "mysql"
+2) "redis"
+1.1.1.1:11732> spop setkey
+"mysql"
+1.1.1.1:11732> SMEMBERS setkey
+1) "redis"
+
+```
+
 ![](https://cdn.xiaolincoding.com/gh/xiaolincoder/redis/%E5%85%AB%E8%82%A1%E6%96%87/%E4%BA%94%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png)
 
 ###  1.2 线程模型
