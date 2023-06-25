@@ -169,9 +169,10 @@ Redis 雪崩 是Redis 的key 大范围的过期，是Redis 自身清理过期key
   而是主服务器自己在本地执行完命令后，就会向客户端返回结果了。
   如果从服务器还没有执行主服务器同步过来的命令，主从服务器间的数据就不一致了。
   ```
-  ```
+ 
+  
     ![](https://cdn.xiaolincoding.com//mysql/other/2b7231b6aabb9a9a2e2390ab3a280b2d.png)
-  ```
+
 
 <br/>
 
