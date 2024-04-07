@@ -1,4 +1,39 @@
-## Raft
+## 一、[基础架构](https://blog.csdn.net/weixin_48154829/category_12373957.html?spm=1001.2014.3001.5482)
+
+###  1.1 概述
+
+主要分为 计算层（TiDB server）、存储层（TiKV、TiFlash）、管理节点（PD）。
+
+![](https://img-blog.csdnimg.cn/19026c28a6cf477f881a9aaf1c85d1d4.png)
+
+<br/>
+
+### 1.2 计算层
+
+- 处理客户端建联
+- mysql协议解析
+- gc
+- sql执行
+
+### 1.3.1 存储层-TiKV
+
+- rocksdb 落盘
+-  mvcc
+- region group内raft协议保证多副本数据一致性
+- 行存适合OLTP，是TiKV承载的功能；
+
+### 1.3.2 存储层-TiFlash
+
+- TiFlash存储的数据和 TiKV是一样的 ， 是TiKV的列存储版本
+- 列存适合OLAP ，是TiFlash承载的功能，比如暴力扫描 ，分析数据，生成报表等
+
+###  1.4 管理层
+
+- 生成TSO
+- 负载均衡
+- 元数据管理
+
+## [Raft](https://blog.csdn.net/weixin_48154829/article/details/131766046)
 
 ![](https://pic2.zhimg.com/v2-6199c4b5150737aa28f158a06fa8bb09_r.jpg)
 
@@ -7,7 +42,6 @@ TiKV 使用 Raft 一致性算法来保证数据的安全，默认提供的是三
 写：
 
 - 当 Client 需要写入某个数据的时候，Client 会将操作发送给 Raft Leader，这个在 TiKV 里面我们叫做 **Propose**。
-
 - Leader 会将操作编码成一个 **entry**，写入到自己的 Raft Log 里面，这个我们叫做 **Append**。
 - Leader 也会通过 Raft 算法将 entry 复制到其他的 Follower 上面，这个我们叫做 **Replicate**。
 - Follower 收到这个 entry 之后也会同样进行 Append 操作，顺带告诉 Leader Append 成功。当 Leader 发现这个 entry 已经被大多数节点 Append，就认为这个 entry 已经是 Committed 的了，然后就可以将 entry 里面的操作解码出来，执行并且应用到状态机里面，这个我们叫做 **Apply**。
@@ -55,7 +89,10 @@ Data CF: W a_10 = value
 Write CF: W a_11 = 10
 
 当 Commit 成功之后，对于一个 key-value 来说，它就会在 Data CF 和 Write CF 里面都有记录，在 Data CF 里面会记录实际的数据， Write CF 里面则会记录对应的 startTS。
-当我们要读取数据的时候，也会先从 TSO 拿到一个 startTS，譬如 12，然后进行读：
+
+<br/>
+
+当我们要**读取数据**的时候，也会先从 TSO 拿到一个 startTS，譬如 12，然后进行读：
 
 > Lock CF: R a
 Write CF: S a_12 -> a_11 = 10
@@ -120,12 +157,12 @@ TxnKV 对应的就是上面提到的 Percolator，而 RawKV 则不会对事务�
 
 ```sql
 CREATE TABLE t1 {
-	id BIGINT PRIMARY KEY,
-	name VARCHAR(1024),
-	age BIGINT,
-	content BLOB,
-	UNIQUE(name),
-	INDEX(age),
+    id BIGINT PRIMARY KEY,
+    name VARCHAR(1024),
+    age BIGINT,
+    content BLOB,
+    UNIQUE(name),
+    INDEX(age),
 }
 
 ```
