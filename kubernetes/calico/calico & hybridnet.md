@@ -1,11 +1,13 @@
 ||calico BGP|hybridnet BGP|hybridnet global BGP|
 |--|--|--|--|
 |ip资源CRD|ippool|Network|Network|
-|rr广播CRD|block（）|subnet （NO_EXPORT）|明细路由 （不带NO_EXPORT）|
+|rr广播CRD|block|subnet （NO_EXPORT）|明细路由 （不带NO_EXPORT）|
 |是否支持自动创建子网断资源|block可在ippool资源充足时自动创建。ippool需手动创建。|subnet消耗完需手动创建||
 
 hybridnet BGP VS global BGP ：
+
 前者在进行rr 传播的时候，是以subnet聚合后传播，且只在当前AS内（因为有noexport）。
+
 后者 是以 明细路由出传播，且 可以跨AS传播（因为没有noexport ）
 
 <br/>
